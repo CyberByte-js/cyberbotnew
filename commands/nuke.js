@@ -9,20 +9,26 @@ module.exports =
     {
         await interaction.reply('🧨⠀⠀⠀⠀⠀⠀⠀' + `<@${interaction.options.get('who').value}>`)
         await wait(1000)
-        await interaction.editReply('⠀🧨⠀⠀⠀⠀⠀⠀' + `<@${interaction.options.get('who').value}>`)
-        await wait(1000)
-        await interaction.editReply('⠀⠀🧨⠀⠀⠀⠀⠀' + `<@${interaction.options.get('who').value}>`)
-        await wait(1000)
-        await interaction.editReply('⠀⠀⠀🧨⠀⠀⠀⠀' + `<@${interaction.options.get('who').value}>`)
-        await wait(1000)
-        await interaction.editReply('⠀⠀⠀⠀🧨⠀⠀⠀' + `<@${interaction.options.get('who').value}>`)
-        await wait(1000)
-        await interaction.editReply('⠀⠀⠀⠀⠀🧨⠀⠀' + `<@${interaction.options.get('who').value}>`)
-        await wait(1000)
-        await interaction.editReply('⠀⠀⠀⠀⠀⠀🧨⠀' + `<@${interaction.options.get('who').value}>`)
-        await wait(1000)
-        await interaction.editReply('⠀⠀⠀⠀⠀⠀⠀🧨' + `<@${interaction.options.get('who').value}>`)
-        await wait(1000)
-        await interaction.editReply('💥')
+        try
+        {
+            await interaction.editReply('⠀🧨⠀⠀⠀⠀⠀⠀' + `<@${interaction.options.get('who').value}>`)
+            await wait(1000)
+            await interaction.editReply('⠀⠀🧨⠀⠀⠀⠀⠀' + `<@${interaction.options.get('who').value}>`)
+            await wait(1000)
+            await interaction.editReply('⠀⠀⠀🧨⠀⠀⠀⠀' + `<@${interaction.options.get('who').value}>`)
+            await wait(1000)
+            await interaction.editReply('⠀⠀⠀⠀🧨⠀⠀⠀' + `<@${interaction.options.get('who').value}>`)
+            await wait(1000)
+            await interaction.editReply('⠀⠀⠀⠀⠀🧨⠀⠀' + `<@${interaction.options.get('who').value}>`)
+            await wait(1000)
+            await interaction.editReply('⠀⠀⠀⠀⠀⠀🧨⠀' + `<@${interaction.options.get('who').value}>`)
+            await wait(1000)
+            await interaction.editReply('⠀⠀⠀⠀⠀⠀⠀🧨' + `<@${interaction.options.get('who').value}>`)
+            await wait(1000)
+            await interaction.editReply('💥')
+        } catch (err)
+        {
+            interaction.channel.send('houve um erro! talvez tenha acontecido porque você apagou minha mensagem... ```' + err + '```')
+        }
     }
 }
